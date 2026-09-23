@@ -16,6 +16,12 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         console.error("No se encontró el botón btnConectar en el HTML");
     }
+    const btnBuscar = document.getElementById('btnBuscar');
+    if (btnBuscar) {
+        btnBuscar.addEventListener('click', buscarCategoria);
+    } else {
+        console.error("No se encontró el botón btnBuscar en el HTML");
+    }
 });
 
 // 4. Función que se ejecuta al hacer clic en CONECTAR
@@ -29,9 +35,13 @@ function conectarSupabase() {
         // Si se crea correctamente, mostramos el mensaje
         alert("CONEXIÓN EXITOSA");
         console.log("Cliente Supabase inicializado correctamente:", supabaseClient);
-        
     } catch (error) {
         alert("ERROR DE CONEXIÓN");
         console.error("Detalles del error:", error);
     }
+
+
+
+
+    
 }
